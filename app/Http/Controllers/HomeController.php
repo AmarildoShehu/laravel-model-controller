@@ -9,9 +9,13 @@ class HomeController extends Controller
 {
     public function __invoke()
     {
-        // Utilizza Eloquent per recuperare tutti i film
         $movies = Movie::all();
-
         return view('movies.index', compact('movies'));
+    }
+
+    public function show($id)
+    {
+        $movie = Movie::find($id);
+        return view('movies.show', compact('movie'));
     }
 }
