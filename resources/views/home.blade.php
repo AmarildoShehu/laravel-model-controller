@@ -16,6 +16,8 @@
 </head>
 
 <body>
+
+    {{dd($movies)}}
     <h1>ciao</h1>
 </body>
 
